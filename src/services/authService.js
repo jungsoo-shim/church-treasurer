@@ -13,3 +13,18 @@ export const loginWithGoogle = async () => {
     throw new Error(error.message);
   }
 };
+
+export const logout = async () => {
+  try {
+    await signOut(auth);
+    console.log('User signed out');
+  } catch (error) {
+    throw new Error(error.message);
+  }
+};
+
+export const onAuthStateChangedHandler = (callback) => {
+  return onAuthStateChanged(auth, (user) => {
+    callback(user);
+  });
+};
