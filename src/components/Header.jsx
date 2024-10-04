@@ -2,20 +2,23 @@ import React from 'react';
 
 const Header = ({ isLoggedIn, onLogin }) => {
   return (
-    <header className="">
+    <header className="bg-slate-800 text-white fixed top-0 left-0 w-screen h-12 flex justify-between items-center">
+      <div className="font-poppins text-lg">Church Treasurer</div>
       {isLoggedIn ? (null) : (
-          <>
-            <div>Church Treasurer</div>
-            <nav>
-              <ul>
-                <li><a href="">Home</a></li>
-                <li><a href="">About</a></li>
-                <li><a href="">Services</a></li>
-                <li><a href="">Contact</a></li>
-                <li><a href="">Donate</a></li>
-              </ul>
-            </nav>
-          </>
+        <div>
+          <nav>
+            <ul className="space-x-4 flex justify-stretch">
+              <li><a href="">Home</a></li>
+              <li><a href="">About</a></li>
+              <li><a href="">Services</a></li>
+              <li><a href="">Contact</a></li>
+              <li><a href="">Donate</a></li>
+            </ul>
+          </nav>
+        </div>
+      )}
+      {isLoggedIn ? (null) : (
+      <div className="font-bold"><button>Log in</button></div>
       )}
     </header>
   )
