@@ -2,7 +2,9 @@ import React from 'react';
 
 const Menu = () => {
   return (
-    <button>Menu</button>
+    <div className="flex justify-end">
+      <button>Menu</button>
+    </div>
   )
 }
 
